@@ -21,7 +21,7 @@ public class PetTypesPage {
 //    @Step("Open page")
     public PetTypesPage openPage(){
         open("/pettypes");
-        Selenide.Wait().withTimeout(Duration.ofSeconds(2));
+        Selenide.sleep(3000);
         return this;
     }
 
@@ -32,9 +32,9 @@ public class PetTypesPage {
             $(By.xpath("//input[@ng-reflect-model='" + petType + "']")).parent().parent()
                     .$(By.xpath("./td/button[contains(text(), 'Delete')]"))
                     .shouldBe(Condition.enabled).click();
-            Selenide.Wait().withTimeout(Duration.ofSeconds(2));
+            Selenide.sleep(2000);
             openPage();
-            Selenide.Wait().withTimeout(Duration.ofSeconds(2));
+
             Assert.assertFalse(getPetTypes().contains(petType), "New pet type shouldn't be in the table");
         }
         return this;
