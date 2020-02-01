@@ -90,7 +90,8 @@ public class VeterinarianAddPage {
 
     public VeterinarianAddPage clickSave () {
         $(By.xpath("//button[contains(text(), 'Save Vet')]")).click();
-        Selenide.Wait().withTimeout(Duration.ofSeconds(2));
+//        Selenide.Wait().withTimeout(Duration.ofSeconds(4));
+        Selenide.sleep(3000);
         return this;
     }
 }

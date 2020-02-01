@@ -28,7 +28,12 @@ public class PetTypesAddTest {
         PetTypesPage page = new PetTypesPage();
 
         String testType = "testType";
-        page.openPage().deleteIfExist(testType).clickAddButton().fillName(testType).clickSaveButton().openPage()
+        page.openPage()
+                .deleteIfExist(testType)
+                .clickAddButton()
+                .fillName(testType)
+                .clickSaveButton()
+                .openPage()
                 .tableContainsPetType(testType);
 
     }

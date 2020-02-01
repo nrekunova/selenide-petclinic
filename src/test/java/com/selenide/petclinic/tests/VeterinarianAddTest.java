@@ -18,7 +18,7 @@ public class VeterinarianAddTest {
 
     static {
         Configuration.baseUrl = com.selenide.petclinic.config.Configuration.getInstance().getMainUrl();
-//        Configuration.timeout = 7000;
+        Configuration.timeout = 7000;
         Configuration.browser = com.selenide.petclinic.config.Configuration.getInstance().getBrowser();
     }
 

@@ -20,7 +20,8 @@ public class VeterinariansPage {
 
     public VeterinariansPage openPage() {
         open("/vets");
-        Selenide.Wait().withTimeout(Duration.ofSeconds(2));
+//        Selenide.Wait().withTimeout(Duration.ofSeconds(4));
+        Selenide.sleep(3000);
         return this;
     }
 
@@ -34,7 +35,8 @@ public class VeterinariansPage {
         $(By.xpath("//*[@class='table table-striped']")).$$(By.xpath(".//tbody/tr")).forEach(selenideElement -> {
             veterinarians.add(createVeterinarian(selenideElement));
         });
-
+        System.out.println("getVeterinarianList :");
+        veterinarians.forEach(v -> System.out.println(v));
         return veterinarians;
     }
 
