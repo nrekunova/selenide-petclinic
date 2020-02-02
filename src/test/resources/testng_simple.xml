@@ -3,8 +3,8 @@
 
 <suite name="Suite ui" verbose="1" >
     <test name="ui">
-        <classes>
-            <class name="com.selenide.petclinic.tests.SimpleTest"></class>
-        </classes>
+        <packages>
+            <package name="com.automation.petclinic.tests"/>
+        </packages>
     </test>
 </suite>
